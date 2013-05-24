@@ -255,7 +255,7 @@ let s:normal_items = [
 
 let s:bold_items = [
             \ "DiffText", "FoldColumn", "Folded", "StatusLine", "TabLineSel",
-            \ "Title",
+            \ "Title", "MatchParen"
             \ ]
 
 let s:underline_items = [
@@ -409,7 +409,6 @@ if s:style == "light"
     hi CursorColumn                 guibg=#dadada
     hi CursorLine                   guibg=#dadada
     hi IncSearch    guifg=fg        guibg=#5fd7d7
-    hi MatchParen   guifg=NONE      guibg=#5fd7d7
     hi Search       guifg=fg        guibg=#ffaf00
     hi Visual                       guibg=#afd7ff
     if s:contrast == "low"
@@ -417,11 +416,13 @@ if s:style == "light"
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#d70000   guibg=#ffd7d7
         hi Todo         guifg=#af8700   guibg=#ffffaf
+        hi MatchParen   guifg=#87afd7
     else
         hi Cursor                       guibg=#5f87af
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#af0000   guibg=#d7afaf
         hi Todo         guifg=#875f00   guibg=#ffffaf
+        hi MatchParen   guifg=#5f87af
     endif
 else
     hi CursorColumn                 guibg=#444444
@@ -435,7 +436,7 @@ else
         hi CursorIM                     guibg=#5f87af
         hi Error        guifg=#d75f5f   guibg=#870000
         hi IncSearch                    guibg=#00afaf
-        hi MatchParen                   guibg=#87af5f
+        hi MatchParen   guifg=#87af5f
         hi Search                       guibg=#d78700
         hi Todo         guifg=#afaf00   guibg=#5f5f00
     elseif s:contrast == "high"
@@ -443,7 +444,7 @@ else
         hi CursorIM                     guibg=#afd7ff
         hi Error        guifg=#ffafaf   guibg=#af0000
         hi IncSearch                    guibg=#87ffff
-        hi MatchParen                   guibg=#d7ff87
+        hi MatchParen   guifg=#afd7ff
         hi Search                       guibg=#ffaf5f
         hi Todo         guifg=#ffff87   guibg=#87875f
     else
@@ -451,7 +452,7 @@ else
         hi CursorIM                     guibg=#87afd7
         hi Error        guifg=#ff8787   guibg=#870000
         hi IncSearch                    guibg=#5fd7d7
-        hi MatchParen                   guibg=#afd75f
+        hi MatchParen   guifg=#87afd7
         hi Search                       guibg=#d78700
         hi Todo         guifg=#d7d75f   guibg=#5f5f00
     endif
